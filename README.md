@@ -11,3 +11,13 @@
 - navbar {% load socialaccount %}
 - SOCIAL ACCOUNTS > social applications
 - settings.py > LOGIN_REDIRECT_URL = '/blog/'
+
+Comment 오류
+- view.py 에  class PostDetail(DetailView) 
+   context['comment_form'] = CommentForm 추가
+
+pagination 오류
+- base, base_full_width에 <div class="container pt-5 my-5"> 으로 수정
+
+search 기능 오류
+- urls.py에 path('search/<str:q>/', views.PostSearch.as_view()), 추가
